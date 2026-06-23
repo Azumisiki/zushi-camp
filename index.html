@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>以心伝心 逗子合宿 ｜ MCC安海と過ごす2日間</title>
 <meta name="description" content="MCC安海のデモ・相互セッション・ビデオフィードバック。逗子で行う少人数の特別合宿。2026年7月11日（土）〜12日（日）。">
+<!-- Facebook / OGP 共有用（公開後、og:url と og:image を実際のURLに差し替えてください） -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="以心伝心 逗子合宿 ｜ MCC安海と過ごす2日間">
 <meta property="og:description" content="逗子で、自分のコーチングと静かに向き合う2日間。2026年7月11日〜12日 / ZUSHI BASE / 10名限定。">
@@ -55,6 +56,7 @@
     justify-content:center;
     overflow:hidden;
   }
+  /* horizon line — the sea at dawn */
   .horizon{
     position:absolute;left:0;right:0;bottom:24%;
     height:1px;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold) 70%,transparent);
@@ -93,16 +95,249 @@
   }
   .fact{padding:22px 30px;border-left:1px solid var(--line);flex:1;min-width:150px;}
   .fact:first-child{border-left:none;}
-  .fact .k"></div><div class="k">日程</div><div class="v" style="letter-spacing:0;line-height:1.5">7月11日(土)<br>7月12日(日)</div></div>
-  <div class="fact"><div class="k">会場</div><div class="v" style="line-height:1.5">ZUSHI BASE</div></div>
-  <div class="fact"><div class="k">定員</div><div class="v" id="heroSeats">10名<small>先着順</small></div></div>
-  <div class="fact"><div class="k">参加費</div><div class="v"><span class="nb">¥11,000〜</span><small>税込</small></div></div>
-  </div>
+  .fact .k{font-size:11px;letter-spacing:.25em;color:var(--gold-bright);margin-bottom:8px;}
+  .fact .v{font-family:"Shippori Mincho",serif;font-size:17px;color:var(--ivory);letter-spacing:.04em;}
+  .fact .v small{display:block;font-size:13px;font-family:"Noto Sans JP";font-weight:300;color:var(--ivory-dim);}
+  .cta{
+    display:inline-block;background:var(--gold);color:var(--navy-deep);
+    font-family:"Shippori Mincho",serif;font-weight:600;font-size:17px;letter-spacing:.14em;
+    padding:18px 54px;border-radius:2px;text-decoration:none;
+    transition:.35s;opacity:0;animation:rise 1s .75s forwards;
+    box-shadow:0 12px 34px rgba(198,164,92,.28);
+  }
+  .cta:hover{background:var(--gold-bright);transform:translateY(-3px);box-shadow:0 18px 40px rgba(198,164,92,.4);}
+  .scroll-hint{margin-top:54px;font-size:11px;letter-spacing:.3em;color:var(--mist);opacity:0;animation:rise 1s 1s forwards;}
 
-  <a href="#apply" class="cta">合宿に申し込む</a>
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:96px 0;}
+  .sec-label{
+    font-size:12px;letter-spacing:.4em;color:var(--gold-deep);text-transform:uppercase;
+    text-align:center;margin-bottom:18px;
+  }
+  .sec-title{
+    font-family:"Shippori Mincho",serif;font-weight:700;
+    font-size:clamp(26px,4.5vw,38px);letter-spacing:.06em;text-align:center;
+    color:var(--navy);line-height:1.5;margin-bottom:14px;
+  }
+  .sec-lead{text-align:center;max-width:640px;margin:0 auto 56px;color:#46566a;font-size:15.5px;}
+
+  /* WHY cards */
+  .why{background:#fff;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .card{
+    border:1px solid var(--ivory-dim);border-top:3px solid var(--gold);
+    padding:38px 30px;transition:.35s;background:#fff;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(17,48,77,.1);}
+  .card .num{font-family:"Shippori Mincho",serif;font-size:15px;color:var(--gold-deep);letter-spacing:.2em;margin-bottom:16px;}
+  .card h3{font-family:"Shippori Mincho",serif;font-weight:700;font-size:21px;color:var(--navy);margin-bottom:14px;letter-spacing:.04em;line-height:1.5;}
+  .card p{font-size:14.5px;color:#4a5868;}
+
+  /* AI app reveal */
+  .reveal{
+    margin-top:30px;
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);
+    color:var(--ivory);border:1px solid var(--gold);border-radius:3px;
+    padding:40px 44px;position:relative;overflow:hidden;
+  }
+  .reveal::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;
+    background:radial-gradient(circle,rgba(227,199,126,.16),transparent 70%);}
+  .reveal .tag{display:inline-block;background:var(--gold);color:var(--navy-deep);font-family:"Shippori Mincho",serif;font-weight:600;font-size:12px;letter-spacing:.2em;padding:6px 16px;border-radius:2px;margin-bottom:18px;}
+  .reveal h3{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(22px,3.6vw,28px);letter-spacing:.05em;line-height:1.5;margin-bottom:14px;color:var(--gold-bright);}
+  .reveal p{font-size:15px;color:var(--ivory-dim);max-width:680px;position:relative;z-index:1;}
+
+  /* COACH */
+  .coach{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);color:var(--ivory);}
+  .coach .sec-title{color:var(--ivory);}
+  .coach-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:54px;align-items:center;}
+  .coach-stats{display:flex;flex-direction:column;gap:0;border-left:1px solid var(--line);padding-left:34px;}
+  .coach-stat{padding:14px 0;}
+  .coach-stat .big{font-family:"Shippori Mincho",serif;font-size:46px;font-weight:700;color:var(--gold-bright);line-height:1;}
+  .coach-stat .big small{font-size:18px;}
+  .coach-stat .cap{font-size:13px;color:var(--ivory-dim);letter-spacing:.08em;margin-top:6px;}
+  .coach-body h3{font-family:"Shippori Mincho",serif;font-size:26px;font-weight:700;letter-spacing:.06em;margin-bottom:20px;}
+  .coach-body h3 small{display:block;font-size:13px;letter-spacing:.3em;color:var(--gold-bright);font-weight:400;margin-bottom:10px;}
+  .coach-body p{color:var(--ivory-dim);font-size:15px;margin-bottom:16px;}
+  .mcc-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold);border-radius:40px;padding:8px 20px;font-size:12px;letter-spacing:.18em;color:var(--gold-bright);margin-top:6px;}
+  .mcc-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold-bright);}
+
+  /* SCHEDULE — signature */
+  .schedule{background:var(--ivory);}
+  .day-head{
+    display:flex;align-items:baseline;gap:18px;margin:46px 0 6px;
+    border-bottom:1px solid var(--line);padding-bottom:14px;
+  }
+  .day-head:first-of-type{margin-top:0;}
+  .day-no{font-family:"Shippori Mincho",serif;font-size:14px;letter-spacing:.2em;color:var(--gold-deep);}
+  .day-title{font-family:"Shippori Mincho",serif;font-size:24px;font-weight:700;color:var(--navy);letter-spacing:.05em;}
+  .day-date{margin-left:auto;font-size:13px;color:#5d6b7a;letter-spacing:.08em;}
+  .tl{list-style:none;}
+  .tl li{
+    display:grid;grid-template-columns:88px 1fr;gap:22px;
+    padding:15px 0;border-bottom:1px dashed var(--ivory-dim);align-items:baseline;
+  }
+  .tl li:last-child{border-bottom:none;}
+  .tl .time{font-family:"Shippori Mincho",serif;font-weight:600;font-size:17px;color:var(--gold-deep);letter-spacing:.04em;}
+  .tl .act{font-size:15px;color:var(--ink);}
+  .tl .act b{font-weight:500;color:var(--navy);}
+  .tl li.key .act b{color:var(--navy);}
+  .tl li.key{background:linear-gradient(90deg,rgba(198,164,92,.1),transparent);margin:0 -16px;padding-left:16px;padding-right:16px;border-radius:3px;}
+  .tl .tag{display:inline-block;font-size:11px;letter-spacing:.1em;color:#fff;background:var(--navy-light);border-radius:3px;padding:2px 9px;margin-left:8px;vertical-align:middle;}
+  .tl .tag.gold{background:var(--gold);color:var(--navy-deep);}
+
+  /* DETAILS */
+  .details{background:#fff;}
+  .dl{display:grid;grid-template-columns:0.4fr 0.6fr;gap:0;border:1px solid var(--ivory-dim);}
+  .dl div{padding:26px 30px;border-bottom:1px solid var(--ivory-dim);}
+  .dl div:nth-child(odd){border-right:1px solid var(--ivory-dim);}
+  .dl .dk{font-size:12px;letter-spacing:.2em;color:var(--gold-deep);margin-bottom:10px;}
+  .dl .dv{font-family:"Shippori Mincho",serif;font-size:19px;color:var(--navy);letter-spacing:.03em;line-height:1.6;}
+  .dl .dv small{font-family:"Noto Sans JP";font-size:13.5px;font-weight:300;color:#5a6877;display:block;margin-top:6px;line-height:1.7;}
+
+  /* FACILITY GALLERY */
+  .facility{background:var(--navy);color:var(--ivory);}
+  .facility .sec-title{color:var(--ivory);}
+  .facility .sec-lead{color:var(--ivory-dim);}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .gallery-grid figure{margin:0;}
+  .gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border:1px solid var(--line);border-radius:3px;}
+  .gallery-grid figcaption{font-family:"Shippori Mincho",serif;font-size:13.5px;color:var(--ivory-dim);text-align:center;margin-top:10px;letter-spacing:.05em;}
+  @media(max-width:720px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:11px;} .gallery-grid figcaption{font-size:12px;}}
+  .note{margin-top:20px;font-size:13px;color:#5d6b7a;text-align:center;letter-spacing:.04em;}
+
+  /* POLICY */
+  .policy{background:var(--ivory);}
+  .policy-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  .policy-box{background:#fff;border:1px solid var(--ivory-dim);border-left:3px solid var(--gold);padding:30px 30px;}
+  .policy-box h3{font-family:"Shippori Mincho",serif;font-weight:700;font-size:18px;color:var(--navy);letter-spacing:.05em;margin-bottom:16px;}
+  .policy-box p{font-size:14.5px;color:#4a5868;}
+  .cxl{list-style:none;}
+  .cxl li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed var(--ivory-dim);font-size:14px;color:#4a5868;}
+  .cxl li:last-child{border-bottom:none;}
+  .cxl li .rate{font-family:"Shippori Mincho",serif;font-weight:600;color:var(--navy);white-space:nowrap;}
+  .cxl li .rate.free{color:var(--ok,#4E7E5B);}
+  .cxl li .rate.full{color:var(--err,#C0593F);}
+  .policy-note{margin-top:18px;font-size:12.5px;color:#5d6b7a;}
+
+  /* ACCESS */
+  .access{background:var(--navy-deep);color:var(--ivory);text-align:center;}
+  .access .sec-title{color:var(--ivory);}
+  .access .place{font-family:"Shippori Mincho",serif;font-size:24px;color:var(--gold-bright);letter-spacing:.06em;margin-bottom:8px;}
+  .access .addr{color:var(--ivory-dim);font-size:15px;margin-bottom:6px;}
+  .access .way{font-size:14px;color:var(--mist);letter-spacing:.04em;}
+
+  /* FINAL CTA */
+  .final{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);color:var(--ivory);text-align:center;}
+  .final h2{font-family:"Shippori Mincho",serif;font-size:clamp(26px,5vw,40px);font-weight:700;letter-spacing:.06em;line-height:1.5;margin-bottom:18px;}
+  .final p{color:var(--ivory-dim);margin-bottom:38px;font-size:15.5px;}
+  .seats{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:12px 28px;font-size:16px;letter-spacing:.1em;color:var(--gold-bright);margin-bottom:34px;}
+  .seats.full{color:#E7A77E;border-color:rgba(231,167,126,.45);}
+
+  /* embedded apply form */
+  .applyform{max-width:640px;margin:8px auto 0;background:#fff;border:1px solid var(--ivory-dim);border-top:3px solid var(--gold);border-radius:3px;padding:40px 38px;text-align:left;}
+  .applyform .ff{margin-bottom:22px;}
+  .applyform label{display:block;font-size:13px;letter-spacing:.05em;color:var(--navy);font-weight:500;margin-bottom:8px;}
+  .applyform label .rq{color:#C0593F;font-size:11px;margin-left:6px;}
+  .applyform label .op{color:var(--mist);font-size:11px;margin-left:6px;}
+  .applyform input,.applyform select,.applyform textarea{width:100%;border:1px solid var(--ivory-dim);background:#fcfaf4;padding:12px 14px;font-family:inherit;font-size:16px;font-weight:300;color:var(--ink);border-radius:2px;transition:.2s;}
+  .applyform input:focus,.applyform select:focus,.applyform textarea:focus{outline:none;border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px rgba(198,164,92,.14);}
+  .applyform textarea{resize:vertical;min-height:84px;}
+  .applyform .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .applyform .hint{font-size:12px;color:#8a94a0;margin-top:5px;}
+  .applyform .ff.bad input,.applyform .ff.bad select{border-color:#C0593F;background:#fdf4f1;}
+  .applyform .em{display:none;color:#C0593F;font-size:12px;margin-top:5px;}
+  .applyform .ff.bad .em{display:block;}
+  .applyform .chk{background:#faf7ef;border:1px solid var(--ivory-dim);border-radius:2px;padding:16px 18px;margin-bottom:26px;}
+  .applyform .chk.bad{border-color:#C0593F;background:#fdf4f1;}
+  .applyform .chk .row{display:flex;gap:12px;align-items:flex-start;margin-bottom:4px;padding:6px 0;}
+  .applyform .chk .row:last-child{margin-bottom:0;}
+  .applyform .chk input{width:20px;height:20px;margin-top:1px;flex-shrink:0;accent-color:var(--gold);}
+  .applyform .chk label{font-size:13px;color:#4a5868;margin:0;font-weight:300;letter-spacing:0;line-height:1.6;cursor:pointer;}
+  .applyform .submit{width:100%;background:var(--gold);color:var(--navy-deep);border:none;font-family:"Shippori Mincho",serif;font-weight:600;font-size:17px;letter-spacing:.12em;padding:17px;border-radius:2px;cursor:pointer;transition:.3s;}
+  .applyform .submit:hover{background:var(--gold-bright);}
+  .applyform .pnote{font-size:12px;color:#8a94a0;text-align:center;margin-top:14px;}
+  .applydone{display:none;max-width:640px;margin:8px auto 0;background:#fff;border:1px solid var(--ivory-dim);border-top:3px solid var(--gold);border-radius:3px;text-align:center;padding:46px 30px;}
+  .applydone .ic{width:66px;height:66px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;}
+  .applydone h3{font-family:"Shippori Mincho",serif;font-size:24px;color:var(--navy);letter-spacing:.05em;margin-bottom:12px;}
+  .applydone p{color:#4a5868;font-size:14.5px;}
+  @media(max-width:560px){.applyform{padding:30px 22px;} .applyform .two{grid-template-columns:1fr;}}
+
+  footer{background:var(--navy-deep);color:var(--mist);text-align:center;padding:38px 20px;font-size:12px;letter-spacing:.1em;border-top:1px solid rgba(255,255,255,.06);}
+  footer .mincho{color:var(--ivory-dim);font-size:15px;letter-spacing:.2em;display:block;margin-bottom:8px;}
+
+  .nb{white-space:nowrap;}
+  .hero .fact{display:flex;flex-direction:column;justify-content:flex-start;}
+  .hero .fact .v small{white-space:nowrap;}
+  .day-date{white-space:nowrap;}
+  h1,h2,h3,.sec-title,.card h3,.reveal h3,.day-title,.final h2{text-wrap:balance;}
+  .sec-lead{text-wrap:balance;}
+  p{text-wrap:pretty;}
+  .stickycta{display:none;}
+  @media(max-width:760px){
+    .hero-facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);}
+    .fact{border-left:none;border-top:none;padding:16px 12px;min-width:0;flex:none;}
+    .fact:nth-child(even){border-left:1px solid var(--line);}
+    .fact:nth-child(n+3){border-top:1px solid var(--line);}
+    .cards{grid-template-columns:1fr;}
+    .coach-grid{grid-template-columns:1fr;gap:36px;}
+    .coach-stats{flex-direction:row;flex-wrap:wrap;border-left:none;padding-left:0;gap:24px;}
+    .coach-stat{flex:1;min-width:120px;}
+    .dl{grid-template-columns:1fr;}
+    .dl div:nth-child(odd){border-right:none;}
+    .tl li{grid-template-columns:70px 1fr;gap:14px;}
+    section{padding:70px 0;}
+    .policy-grid{grid-template-columns:1fr;}
+    .eyebrow{font-size:12px;letter-spacing:.18em;}
+    .hero h1 .small{font-size:.38em;letter-spacing:.12em;}
+    .wrap{padding:0 20px;}
+    .reveal{padding:30px 24px;}
+    .applyform{padding:32px 22px;}
+    .applyform .two{grid-template-columns:1fr;}
+    .coach-stat .big{font-size:36px;}
+    .coach-body h3{font-size:21px;}
+    .coach-stat .cap{font-size:12px;}
+    .dl .dv{font-size:18px;}
+    body{padding-bottom:78px;}
+    .stickycta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(10,28,48,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line);transition:transform .3s ease;}
+    .stickycta.hide{transform:translateY(135%);}
+    .stickycta a{display:block;text-align:center;background:var(--gold);color:var(--navy-deep);font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.08em;padding:14px;border-radius:3px;text-decoration:none;}
+  }
+  @media(max-width:380px){
+    .eyebrow{font-size:10px;letter-spacing:.1em;}
+    .hero-inner{padding-top:74px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="sun"></div>
+  <div class="hero-inner wrap">
+    <div class="eyebrow"><span>以</span><span>心</span><span>伝</span><span>心</span>&nbsp;&nbsp;コーチング合宿 2026 夏</div>
+    <h1>
+      <span class="small">コーチングを見つめ直す2日間</span>
+      逗子<em>合宿</em>
+    </h1>
+    <p class="hero-sub">MCC安海のデモ、相互セッション、ビデオフィードバック。<br>自分のコーチングと静かに向き合う<span style="white-space:nowrap">少人数の合宿です。</span></p>
+
+    <div class="hero-facts">
+      <div class="fact"><div class="k">日程</div><div class="v" style="letter-spacing:0;line-height:1.5">7月11日(土)<br>7月12日(日)</div></div>
+      <div class="fact"><div class="k">会場</div><div class="v" style="line-height:1.5">ZUSHI BASE</div></div>
+      <div class="fact"><div class="k">定員</div><div class="v" id="heroSeats">10名<small>先着順</small></div></div>
+      <div class="fact"><div class="k">参加費</div><div class="v"><span class="nb">¥11,000〜</span><small>税込</small></div></div>
+    </div>
+
+    <a href="#apply" class="cta">合宿に申し込む</a>
   </div>
 </header>
 
+<!-- WHY -->
 <section class="why">
   <div class="wrap">
     <h2 class="sec-title">「わかっている」を、<br>「できる」に変える時間。</h2>
@@ -133,6 +368,7 @@
   </div>
 </section>
 
+<!-- COACH -->
 <section class="coach">
   <div class="wrap">
     <h2 class="sec-title">安海 将広</h2>
@@ -152,6 +388,7 @@
   </div>
 </section>
 
+<!-- SCHEDULE -->
 <section class="schedule">
   <div class="wrap">
     <h2 class="sec-title">2日間のながれ</h2>
@@ -188,9 +425,10 @@
   </div>
 </section>
 
+<!-- FACILITY PHOTOS -->
 <section class="facility">
   <div class="wrap">
-    <h2 class="sec-title">会場  ZUSHI BASE</h2>
+    <h2 class="sec-title">会場&nbsp;&nbsp;ZUSHI BASE</h2>
     <p class="sec-lead">コンクリート造の落ち着いた研修施設。学びの部屋、中庭のBBQエリア、<br>カーテン付きカプセルの就寝スペースなど、2日間を快適に過ごせる環境です。</p>
     <div class="gallery-grid">
       <figure><img src="zushi-1.jpg" alt="ZUSHI BASE エントランス看板" loading="lazy"><figcaption>エントランス</figcaption></figure>
@@ -203,24 +441,27 @@
   </div>
 </section>
 
+<!-- DETAILS -->
 <section class="details">
   <div class="wrap">
     <h2 class="sec-title">開催概要</h2>
     <div class="dl">
       <div><div class="dk">日時</div><div class="dv"><span class="nb">集合 7月11日(土) 11:00 (現地)</span><br><span class="nb">解散 7月12日(日) 13:00 (現地)</span></div></div>
-      <div><div class="dk">場所</div><div class="dv">ZUSHI BASE<small><span class="nb">〒249-0002 神奈川県逗子市山の根1-2-29</span><br><span class="nb">JR逗子駅西口より徒歩5分</span>（駐車場3台可能）<br><span class="nb">ファミリーマート逗子山の根店の隣</span><br><a href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E9%80%97%E5%AD%90%E5%B8%82%E5%B1%B1%E3%81%AE%E6%A0%B91-2-29" target="_blank" rel="noopener" style="color:var(--gold-deep);font-weight:600;text-decoration:underline">Googleマップで見る →</a></small></div></div>
+      <div><div class="dk">場所</div><div class="dv">ZUSHI BASE<small><span class="nb">〒249-0002　神奈川県逗子市山の根1-2-29</span><br><span class="nb">JR逗子駅西口より徒歩5分</span>（駐車場3台可能）<br><span class="nb">ファミリーマート逗子山の根店の隣</span><br><a href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E9%80%97%E5%AD%90%E5%B8%82%E5%B1%B1%E3%81%AE%E6%A0%B91-2-29" target="_blank" rel="noopener" style="color:var(--gold-deep);font-weight:600;text-decoration:underline">Googleマップで見る →</a></small></div></div>
       <div><div class="dk">定員</div><div class="dv" id="capSeats">10名<small>先着順</small></div></div>
       <div><div class="dk">費用</div><div class="dv"><div style="display:flex;justify-content:space-between;gap:14px"><span class="nb">2日間・宿泊</span><span class="nb">22,000円（税込）</span></div><div style="display:flex;justify-content:space-between;gap:14px"><span class="nb">2日間・通い</span><span class="nb">13,600円（税込）</span></div><div style="display:flex;justify-content:space-between;gap:14px"><span class="nb">1日のみ</span><span class="nb">11,000円（税込）</span></div><small><span class="nb">当日現地にて現金払い</span></small></div></div>
       <div><div class="dk">申込締切</div><div class="dv"><span class="nb">7月8日（火）</span><small>定員に達し次第、締め切ります</small></div></div>
-      <div><div class="dk">持物</div><div class="dv"><span class="nb">パソコン・筆記具・初日昼食</span><br><span class="nb">フェイスタオル・パジャマ</span><br><span class="nb">歯ブラシ・洗面用具</span></div></div>
+      <div><div class="dk">持物</div><div class="dv"><span class="nb">PC・筆記具・初日昼食</span><br><span class="nb">フェイスタオル・パジャマ</span><br><span class="nb">歯ブラシ・洗面用具</span></div></div>
       <div><div class="dk">部屋</div><div class="dv"><span class="nb">定員6〜8名</span><br><span class="nb">カプセルホテル（カーテン付）</span><br><span class="nb">マットはエアウィーヴ</span><br><span class="nb">シーツ付き</span></div></div>
       <div><div class="dk">設備</div><div class="dv"><span class="nb">シャワー3室・ドライヤー4台</span><br>シャンプー・リンス・ボディソープ<br>バスタオル・簡易スリッパあり<br>Wi-Fi完備<br>屋外BBQエリア（懇親会・2次会）</div></div>
       <div><div class="dk">周辺</div><div class="dv">隣がファミリーマート<small>買い物に便利です</small></div></div>
       <div><div class="dk">内容</div><div class="dv">実践型プログラム<small>安海のデモ・解説／相互セッション練習／ビデオフィードバック ほか</small></div></div>
     </div>
+    
   </div>
 </section>
 
+<!-- POLICY -->
 <section class="policy">
   <div class="wrap">
     <h2 class="sec-title">申込みについて</h2>
@@ -235,7 +476,7 @@
           <div style="display:flex;justify-content:space-between"><span class="nb">1日のみ</span><span class="nb">11,000円(税込)</span></div>
         </div>
         <p style="margin:10px 0 16px;color:#4a5868;font-size:14px">当日現地にて現金払い。事前振込不要。</p>
-        <p style="margin:0;font-size:15px"><span class="nb">申込締切</span>  <b class="nb" style="color:var(--navy);font-weight:500">2026年7月8日（火）</b><br><span style="color:#4a5868;font-size:14px">定員10名に達し次第、締め切ります。</span></p>
+        <p style="margin:0;font-size:15px"><span class="nb">申込締切</span>　<b class="nb" style="color:var(--navy);font-weight:500">2026年7月8日（火）</b><br><span style="color:#4a5868;font-size:14px">定員10名に達し次第、締め切ります。</span></p>
       </div>
       <div class="policy-box">
         <h3>キャンセル規定</h3>
@@ -250,9 +491,10 @@
   </div>
 </section>
 
+<!-- FINAL CTA -->
 <section class="final" id="apply">
   <div class="wrap">
-    <div class="seats" id="seats"><span class="nb">先着10名</span>  <span class="nb">申込締切 7月8日（火）</span></div>
+    <div class="seats" id="seats"><span class="nb">先着10名</span>　<span class="nb">申込締切 7月8日（火）</span></div>
     <h2>コーチとして、もう一段先へ。</h2>
     <p>定員に達し次第、締め切ります。<br>下記フォームから、手続き下さい。</p>
 
@@ -266,8 +508,8 @@
       <div class="ff" data-req="select"><label>参加形態 <span class="rq">必須</span></label>
         <select name="entry.1266253355">
           <option value="">選択してください</option>
-          <option>2日間・宿泊 22,000円（税込）</option>
-          <option>2日間・通い 13,600円（税込）</option>
+          <option>2日間・宿泊　22,000円（税込）</option>
+          <option>2日間・通い　13,600円（税込）</option>
           <option>1日のみ・7月11日（土）11,000円（税込）</option>
           <option>1日のみ・7月12日（日）11,000円（税込）</option>
         </select>
@@ -287,7 +529,7 @@
       <div class="ff"><label>緊急連絡先 <span class="op">任意</span></label><input type="text" name="entry.1648928297"></div>
 
       <div class="chk" id="chkBox">
-        <div class="row"><input type="checkbox" name="entry.1640501893" value="持物（パソコン・1手目の昼食・パジャマ・洗面道具）を確認しました" id="c1"><label for="c1">持物（パソコン・1日目の昼食・パジャマ・洗面道具）を確認しました</label></div>
+        <div class="row"><input type="checkbox" name="entry.1640501893" value="持物（PC・筆記具・初日昼食・フェイスタオル・パジャマ・歯ブラシ・洗面用具）を確認しました" id="c1"><label for="c1">持物（PC・筆記具・初日昼食・フェイスタオル・パジャマ・歯ブラシ・洗面用具）を確認しました</label></div>
         <div class="row"><input type="checkbox" name="entry.1640501893" value="参加費を当日、現地で現金で支払います" id="c2"><label for="c2">参加費を当日、現地で現金で支払います</label></div>
         <div class="row"><input type="checkbox" name="entry.1640501893" value="キャンセル規定に同意します" id="c3"><label for="c3">キャンセル規定に同意します</label></div>
       </div>
@@ -310,7 +552,7 @@
 
 <footer>
   <span class="mincho">以心伝心 逗子合宿 2026 夏</span>
-  有限会社以心伝心 代表取締役 安海 将広（MCC）<br>
+  有限会社以心伝心 代表取締役　安海 将広（MCC）<br>
   問い合せ：info@isindensin.jp ／ 090-3231-7803<br>
   © 2026 有限会社以心伝心
 </footer>
@@ -347,6 +589,7 @@
     done.style.display = 'block';
     done.scrollIntoView({ behavior:'smooth', block:'center' });
   }
+  // POST完了（hidden iframeの読み込み）で完了表示
   var hf = document.getElementById('hidden_iframe');
   if(hf) hf.addEventListener('load', showThanks);
 
@@ -357,7 +600,7 @@
       if(bad) bad.scrollIntoView({ behavior:'smooth', block:'center' });
       return false;
     }
-    window.__submitted = true;
+    window.__submitted = true; // 検証OK → Googleフォームへ送信、完了表示へ
   });
 
   form.querySelectorAll('input, select').forEach(function(el){
@@ -385,7 +628,7 @@
         var btn=document.querySelector('#applyForm .submit');
         if(btn){ btn.disabled=true; btn.textContent='受付を終了しました'; btn.style.opacity='.55'; btn.style.cursor='not-allowed'; }
       }else{
-        seats.innerHTML='<span class="nb">先着'+cap+'名</span> <span class="nb">（残り '+rem+'名）</span> <span class="nb">申込締切 7月8日（火）</span>';
+        seats.innerHTML='<span class="nb">先着'+cap+'名</span> <span class="nb">（残り '+rem+'名）</span>　<span class="nb">申込締切 7月8日（火）</span>';
       }
     }
     var hero=document.getElementById('heroSeats');
@@ -397,7 +640,7 @@
   };
   var s=document.createElement('script');
   s.src=EXEC+'?callback=__seats&t='+Date.now();
-  s.onerror=function(){};
+  s.onerror=function(){ /* 取得失敗時は初期表示のまま */ };
   document.body.appendChild(s);
   var apply=document.getElementById('apply'), sticky=document.getElementById('stickyCta');
   if(apply&&sticky&&'IntersectionObserver' in window){
