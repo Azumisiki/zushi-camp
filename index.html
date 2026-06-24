@@ -285,6 +285,9 @@
     .coach-stats{flex-direction:row;flex-wrap:wrap;border-left:none;padding-left:0;gap:24px;}
     .coach-stat{flex:1;min-width:120px;}
     .dl{grid-template-columns:1fr;}
+    .dl div{min-width:0;}
+    .dl .dv{overflow-wrap:anywhere;}
+    .dl .dv .nb{white-space:normal;}
     .dl div:nth-child(odd){border-right:none;}
     .tl li{grid-template-columns:70px 1fr;gap:14px;}
     section{padding:70px 0;}
@@ -496,7 +499,7 @@
   <div class="wrap">
     <div class="seats" id="seats"><span class="nb">先着10名</span>　<span class="nb">申込締切 7月8日（火）</span></div>
     <h2>コーチとして、もう一段先へ。</h2>
-    <p>定員に達し次第、締め切ります。<br>下記フォームから、手続き下さい。</p>
+    <p>定員に達し次第、締め切ります。<br>下記フォームから、申込み下さい。</p>
 
     <form class="applyform" id="applyForm" action="https://docs.google.com/forms/d/e/1FAIpQLSe3X2wjdhLcD1314vP62AmpOkrdGbbEU_E64t3G6qYEcAjE8w/formResponse" method="POST" target="hidden_iframe">
       <div class="ff" data-req="text"><label>参加者氏名 <span class="rq">必須</span></label><input type="text" name="entry.4539040"><div class="em">参加者氏名をご入力ください。</div></div>
