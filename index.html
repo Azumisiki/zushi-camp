@@ -204,7 +204,7 @@
   .gallery-grid figure{margin:0;}
   .gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border:1px solid var(--line);border-radius:3px;}
   .gallery-grid figcaption{font-family:"Shippori Mincho",serif;font-size:13.5px;color:var(--ivory-dim);text-align:center;margin-top:10px;letter-spacing:.05em;}
-  @media(max-width:720px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:11px;} .gallery-grid figcaption{font-size:12px;}}
+  @media(max-width:720px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:11px;} .gallery-grid figcaption{font-size:11px;}}
   .note{margin-top:20px;font-size:13px;color:#5d6b7a;text-align:center;letter-spacing:.04em;}
 
   /* POLICY */
@@ -285,9 +285,7 @@
     .coach-stats{flex-direction:row;flex-wrap:wrap;border-left:none;padding-left:0;gap:24px;}
     .coach-stat{flex:1;min-width:120px;}
     .dl{grid-template-columns:1fr;}
-    .dl div{min-width:0;}
-    .dl .dv{overflow-wrap:anywhere;}
-    .dl .dv .nb{white-space:normal;}
+    .dl div{min-width:0;padding:20px 20px;}
     .dl div:nth-child(odd){border-right:none;}
     .tl li{grid-template-columns:70px 1fr;gap:14px;}
     section{padding:70px 0;}
@@ -301,7 +299,8 @@
     .coach-stat .big{font-size:36px;}
     .coach-body h3{font-size:21px;}
     .coach-stat .cap{font-size:12px;}
-    .dl .dv{font-size:18px;}
+    .dl .dv{font-size:15px;}
+    .dl .dv small{font-size:12.5px;}
     body{padding-bottom:78px;}
     .stickycta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(10,28,48,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line);transition:transform .3s ease;}
     .stickycta.hide{transform:translateY(135%);}
@@ -437,7 +436,7 @@
       <figure><img src="zushi-1.jpg" alt="ZUSHI BASE エントランス看板" loading="lazy"><figcaption>エントランス</figcaption></figure>
       <figure><img src="zushi-2.jpg" alt="学び・セッションのスペース" loading="lazy"><figcaption>学び・セッションの部屋</figcaption></figure>
       <figure><img src="zushi-3.jpg" alt="食事・キッチン" loading="lazy"><figcaption>食事・キッチン</figcaption></figure>
-      <figure><img src="zushi-4.jpg" alt="中庭BBQエリア" loading="lazy"><figcaption>中庭BBQエリア（懇親会・2次会）</figcaption></figure>
+      <figure><img src="zushi-4.jpg" alt="BBQエリア" loading="lazy"><figcaption>BBQエリア（懇親会・2次会）</figcaption></figure>
       <figure><img src="zushi-5.jpg" alt="就寝スペース カーテン付" loading="lazy"><figcaption>就寝スペース（カーテン付）</figcaption></figure>
       <figure><img src="zushi-6.jpg" alt="シャワー室" loading="lazy"><figcaption>シャワー室（3室）</figcaption></figure>
     </div>
@@ -450,15 +449,15 @@
     <h2 class="sec-title">開催概要</h2>
     <div class="dl">
       <div><div class="dk">日時</div><div class="dv"><span class="nb">集合 7月11日(土) 11:00 (現地)</span><br><span class="nb">解散 7月12日(日) 13:00 (現地)</span></div></div>
-      <div><div class="dk">場所</div><div class="dv">ZUSHI BASE<small><span class="nb">〒249-0002　神奈川県逗子市山の根1-2-29</span><br><span class="nb">JR逗子駅西口より徒歩5分</span>（駐車場3台可能）<br><span class="nb">ファミリーマート逗子山の根店の隣</span><br><a href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E9%80%97%E5%AD%90%E5%B8%82%E5%B1%B1%E3%81%AE%E6%A0%B91-2-29" target="_blank" rel="noopener" style="color:var(--gold-deep);font-weight:600;text-decoration:underline">Googleマップで見る →</a></small></div></div>
+      <div><div class="dk">場所</div><div class="dv">ZUSHI BASE<small><span class="nb">〒249-0002</span><br><span class="nb">神奈川県逗子市山の根1-2-29</span><br><span class="nb">JR逗子駅西口より徒歩5分</span><br><span class="nb">駐車3台可</span><br><span class="nb">ファミリーマート逗子山の根店の隣</span><br><a href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E9%80%97%E5%AD%90%E5%B8%82%E5%B1%B1%E3%81%AE%E6%A0%B91-2-29" target="_blank" rel="noopener" style="color:var(--gold-deep);font-weight:600;text-decoration:underline">Googleマップで見る →</a></small></div></div>
       <div><div class="dk">定員</div><div class="dv" id="capSeats">10名<small>先着順</small></div></div>
       <div><div class="dk">費用</div><div class="dv"><div style="display:flex;justify-content:space-between;gap:14px"><span class="nb">2日間・宿泊</span><span class="nb">22,000円（税込）</span></div><div style="display:flex;justify-content:space-between;gap:14px"><span class="nb">2日間・通い</span><span class="nb">13,600円（税込）</span></div><div style="display:flex;justify-content:space-between;gap:14px"><span class="nb">1日のみ</span><span class="nb">11,000円（税込）</span></div><small><span class="nb">当日現地にて現金払い</span></small></div></div>
       <div><div class="dk">申込締切</div><div class="dv"><span class="nb">7月8日（火）</span><small>定員に達し次第、締め切ります</small></div></div>
       <div><div class="dk">持物</div><div class="dv"><span class="nb">PC・筆記具・初日昼食</span><br><span class="nb">フェイスタオル・パジャマ</span><br><span class="nb">歯ブラシ・洗面用具</span></div></div>
       <div><div class="dk">部屋</div><div class="dv"><span class="nb">定員6〜8名</span><br><span class="nb">カプセルホテル（カーテン付）</span><br><span class="nb">マットはエアウィーヴ</span><br><span class="nb">シーツ付き</span></div></div>
-      <div><div class="dk">設備</div><div class="dv"><span class="nb">シャワー3室・ドライヤー4台</span><br>シャンプー・リンス・ボディソープ<br>バスタオル・簡易スリッパあり<br>Wi-Fi完備<br>屋外BBQエリア（懇親会・2次会）</div></div>
+      <div><div class="dk">設備</div><div class="dv"><span class="nb">シャワー3室・ドライヤー4台</span><br><span class="nb">シャンプー・リンス・ボディソープ</span><br><span class="nb">バスタオル・簡易スリッパあり</span><br><span class="nb">Wi-Fi完備</span><br><span class="nb">BBQエリア（懇親会・2次会）</span></div></div>
       <div><div class="dk">周辺</div><div class="dv">隣がファミリーマート<small>買い物に便利です</small></div></div>
-      <div><div class="dk">内容</div><div class="dv">実践型プログラム<small>安海のデモ・解説／相互セッション練習／ビデオフィードバック ほか</small></div></div>
+      <div><div class="dk">内容</div><div class="dv">実践型プログラム<small><span class="nb">安海のデモ・解説</span>／<span class="nb">相互セッション練習</span>／<span class="nb">ビデオフィードバック</span> ほか</small></div></div>
     </div>
     
   </div>
